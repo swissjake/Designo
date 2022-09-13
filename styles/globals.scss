@@ -1,0 +1,27 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url(https://fonts.googleapis.com/css?family=Jost:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+html{
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Jost', sans-serif;
+}
+
+
+@layer components {
+  .container {
+    @apply max-w-[1440px] w-full mx-auto
+}
+}

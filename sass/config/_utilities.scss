@@ -1,0 +1,29 @@
+@use "sass:math";
+
+@function setTextColor($color) {
+    @if(lightness($color) > 70){
+        @return $darkGray
+    }@else{
+        @return $white
+    }
+}
+
+@mixin setBackgroundColor($color){
+    background-color: $color;
+    color: setTextColor($color);
+}
+
+@mixin buttonStyle {
+    width: 152px;
+    height: 56px;
+    border-radius: 8px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 1px;
+}
+
+@function rem($px, $default:16) {
+    @return (math.div($px, $default) * 1rem)
+}
