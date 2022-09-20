@@ -1,0 +1,26 @@
+@import "../../sass/index.scss";
+.container{
+    @include setBackgroundColor($primaryColor);
+
+    &Header{
+        font-size: rem(48);
+
+        @include devices(0px,480px){
+            font-size: rem(32);
+        }
+        
+    }
+    &Text{
+        font-size: rem(16);
+
+        @include devices(0px,480px){
+            font-size: rem(15);
+        }
+       
+    }
+    &Button{
+        @include buttonStyle($white,$light);
+       
+        
+    }
+}

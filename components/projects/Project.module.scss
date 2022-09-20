@@ -1,0 +1,13 @@
+@import "../../sass/index.scss";
+.designText{
+    font-size: rem(40);
+    color: $white;
+
+    @include devices(0px,480px){
+        font-size: rem(28);
+    }
+}
+.designText2{
+    font-size: rem(15);
+    color: $white;
+}

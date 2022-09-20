@@ -1,0 +1,17 @@
+@import "../../sass/index.scss";
+
+.roundedCircle{
+    background: linear-gradient(90deg, rgba(93, 2, 2, 0.0001) 0%, rgba(93, 2, 2, 0.2) 100%);
+    mix-blend-mode: normal;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+.title{
+    font-size: rem(20);
+    color: $darkGray;
+
+   
+}
+.text{
+    font-size: rem(16);
+    color: $darkGray;
+}

@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <nav>
       <div
-        className={`${styles.container} container md:pl-[165px] md:pr-[165px]`}
+        className={`${styles.container} container md:px-[40px] xl:px-[165px]`}
       >
         <div className="hidden md:flex justify-between items-center  my-[64px]">
           <div>
@@ -46,8 +46,8 @@ const Navbar = () => {
 
       {/* Mobile Nav */}
 
-      <div className=" md:hidden">
-        <div className="flex justify-between items-center my-[35px] px-[24px]">
+      <div className="bg-white w-full fixed z-50 md:hidden">
+        <div className=" flex justify-between items-center my-[35px] px-[24px]">
           <div>
             <Image
               alt="logo"
@@ -59,7 +59,7 @@ const Navbar = () => {
             />
           </div>
           <div>
-            {nav ? (
+            {!nav ? (
               <BiMenu onClick={() => setNav(!nav)} className="w-8 h-8" />
             ) : (
               <MdClose onClick={() => setNav(!nav)} className="w-8 h-8" />
@@ -69,8 +69,8 @@ const Navbar = () => {
         <div
           className={
             nav
-              ? `fixed w-full left-0 overflow-hidden transition-all duration-100 ease-in-out `
-              : `fixed w-full left-[-100%] overflow-hidden transition-all duration-100 ease-in-out`
+              ? `fixed w-full z-50 top-[100px] left-0 overflow-hidden transition-all duration-100 ease-in-out `
+              : `fixed w-full z-50 top-[100px] left-[-100%] overflow-hidden transition-all duration-100 ease-in-out`
           }
         >
           <ul className={`${styles.mobileDropdown} py-[16px] px-[24px]`}>

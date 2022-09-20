@@ -1,6 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import AwardWinning from "../components/awardWinning/AwardWinning";
+import Footer from "../components/footer/Footer";
 import Navbar from "../components/navbar/Navbar";
+import Passion from "../components/passion/Passion";
+import Project from "../components/projects/Project";
 
 const Home: NextPage = () => {
   return (
@@ -12,6 +16,10 @@ const Home: NextPage = () => {
       </Head>
 
       <Navbar />
+      <AwardWinning />
+      <Project />
+      <Passion />
+      <Footer />
     </div>
   );
 };
