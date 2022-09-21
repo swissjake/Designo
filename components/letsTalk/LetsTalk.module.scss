@@ -1,0 +1,14 @@
+@import "../../sass/index.scss";
+
+.letsTalkTitle{
+ font-size: rem(40);
+ color: $white;
+}
+
+.letsTalkText{
+    font-size: rem(16);
+    color: white;
+}
+.letsTalkButton{
+    @include buttonStyle($white,$light);
+}
