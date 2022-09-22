@@ -10,25 +10,22 @@ interface Props {
 
 const WebDesignCards = ({ img, title, desc }: Props) => {
   return (
-    <div className="">
-      <div className="flex flex-col md:flex-row lg:flex-col ">
-        <div>
-          <Image src={img} objectFit="contain" alt="express" />
-        </div>
-        <div
-          className={`${styles.container} p-[32px] md:flex md:flex-col md:justify-center`}
+    <div className="flex flex-col md:flex-row lg:flex-col ">
+      <Image src={img} objectFit="contain" alt="express" />
+
+      <div
+        className={`${styles.container} mt-0 p-[32px] group hover:bg-[#E7816B] md:flex md:flex-col md:justify-center lg:rounded-b-[15px] transition-all duration-300 ease-in-out`}
+      >
+        <h1
+          className={`${styles.containerTitle} text-center group-hover:text-white  tracking-[5px] font-medium uppercase leading-[26px]`}
         >
-          <h1
-            className={`${styles.containerTitle} text-center tracking-[5px] font-medium uppercase leading-[26px]`}
-          >
-            {title}
-          </h1>
-          <p
-            className={`${styles.containerText} text-center font-normal  leading-[26px] mt-[16px]`}
-          >
-            {desc}
-          </p>
-        </div>
+          {title}
+        </h1>
+        <p
+          className={`${styles.containerText} text-center group-hover:text-white font-normal  leading-[26px] mt-[16px]`}
+        >
+          {desc}
+        </p>
       </div>
     </div>
   );

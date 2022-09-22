@@ -1,7 +1,7 @@
 import React from "react";
 import express from "../../assets/webdesigncards/express.jpeg";
-import WebDesignCards from "../resusableComponents/webDesignCards/WebDesignCards";
 import express2 from "../../assets/webdesigncards/express2.png";
+import WebDesignCards from "../resusableComponents/webDesignCards/WebDesignCards";
 
 const items: { img: any; title: string; desc: string }[] = [
   {
@@ -29,14 +29,8 @@ const items: { img: any; title: string; desc: string }[] = [
     title: "express",
     desc: "A multi-carrier shipping website for ecommerce businesses",
   },
-  {
-    img: express,
-    title: "express",
-    desc: "A multi-carrier shipping website for ecommerce businesses",
-  },
 ];
-
-const WebDesignCardList = () => {
+const AppDesignCardList = () => {
   return (
     <section>
       <div className="container mt-[96px] md:mt-[160px]  md:pt-0  md:px-[40px] xl:px-[165px] px-[24px]">
@@ -50,4 +44,4 @@ const WebDesignCardList = () => {
   );
 };
 
-export default WebDesignCardList;
+export default AppDesignCardList;
