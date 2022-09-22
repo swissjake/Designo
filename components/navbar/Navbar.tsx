@@ -4,6 +4,7 @@ import logo from "../../assets/shared/desktop/logo-dark.png";
 import styles from "./Navbar.module.scss";
 import { BiMenu } from "react-icons/bi";
 import { MdClose } from "react-icons/md";
+import { useRouter } from "next/router";
 
 const navList: { name: string; ref: string }[] = [
   { name: "OUR COMPANY", ref: "/" },
@@ -13,13 +14,15 @@ const navList: { name: string; ref: string }[] = [
 const Navbar: React.FC = (): JSX.Element => {
   const [nav, setNav] = useState<boolean>(false);
 
+  const router = useRouter();
+
   return (
     <nav>
       <div
         className={`${styles.container} container md:px-[40px] xl:px-[165px]`}
       >
         <div className="hidden md:flex justify-between items-center  my-[64px]">
-          <div>
+          <div onClick={() => router.push("/")}>
             <Image
               alt="logo"
               src={logo}
@@ -48,7 +51,7 @@ const Navbar: React.FC = (): JSX.Element => {
 
       <div className="bg-white w-full fixed z-50 md:hidden">
         <div className=" flex justify-between items-center my-[35px] px-[24px]">
-          <div>
+          <div onClick={() => router.push("/")}>
             <Image
               alt="logo"
               src={logo}

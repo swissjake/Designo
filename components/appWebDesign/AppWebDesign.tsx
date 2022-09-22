@@ -4,8 +4,10 @@ import graphic from "../../assets/projects/graphicdesign.png";
 import app from "../../assets/projects/appdesign.png";
 import { FiChevronRight } from "react-icons/fi";
 import styles from "./AppWebDesign.module.scss";
+import { useRouter } from "next/router";
 
 const AppWebDesign = () => {
+  const router = useRouter();
   return (
     <section>
       <div className="container  md:px-[40px] xl:px-[165px] mt-[160px] px-[24px] ">
@@ -22,7 +24,10 @@ const AppWebDesign = () => {
               >
                 APP DESIGN
               </p>
-              <div className="flex justify-center items-center mt-[24px]">
+              <div
+                onClick={() => router.push("/appDesign")}
+                className="flex justify-center items-center mt-[24px]"
+              >
                 <p
                   className={`${styles.designText2}  tracking-[5px] whitespace-nowrap  font-medium leading-[48px] cursor-pointer`}
                 >
@@ -45,7 +50,10 @@ const AppWebDesign = () => {
               >
                 GRAPHIC DESIGN
               </p>
-              <div className="flex justify-center items-center mt-[24px]">
+              <div
+                onClick={() => router.push("/graphicDesign")}
+                className="flex justify-center items-center mt-[24px]"
+              >
                 <p
                   className={`${styles.designText2} tracking-[5px] whitespace-nowrap  font-medium leading-[48px] cursor-pointer`}
                 >

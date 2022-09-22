@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React from "react";
 import web from "../../assets/projects/webdesign.png";
 import app from "../../assets/projects/appdesign.png";
@@ -7,13 +8,24 @@ import mobileImg1 from "../../assets/projects/mobileImg1.jpeg";
 import styles from "./Project.module.scss";
 import { FiChevronRight } from "react-icons/fi";
 
-const items: { img: any; title: string; text: string }[] = [
-  { img: mobileImg1, title: "web design", text: "view Projects" },
-  { img: app, title: "app design", text: "view Projects" },
-  { img: graphic, title: "graphic design", text: "view Projects" },
+const items: { img: any; title: string; text: string; link: string }[] = [
+  {
+    img: mobileImg1,
+    title: "web design",
+    text: "view Projects",
+    link: "/webDesign",
+  },
+  { img: app, title: "app design", text: "view Projects", link: "/appDesign" },
+  {
+    img: graphic,
+    title: "graphic design",
+    text: "view Projects",
+    link: "/graphicDesign",
+  },
 ];
 
 const Project: React.FC = (): JSX.Element => {
+  const router = useRouter();
   return (
     <section>
       <div className="container  md:px-[40px] xl:px-[165px] mt-[160px] md:pt-0 px-[24px] ">
@@ -30,7 +42,10 @@ const Project: React.FC = (): JSX.Element => {
               >
                 WEB DESIGN
               </p>
-              <div className="flex justify-center items-center">
+              <div
+                onClick={() => router.push("/webDesign")}
+                className="flex justify-center items-center"
+              >
                 <p
                   className={`${styles.designText2} tracking-[5px] whitespace-nowrap  font-medium leading-[48px] cursor-pointer`}
                 >
@@ -58,7 +73,10 @@ const Project: React.FC = (): JSX.Element => {
                 >
                   APP DESIGN
                 </p>
-                <div className="flex justify-center items-center">
+                <div
+                  onClick={() => router.push("/appDesign")}
+                  className="flex justify-center items-center"
+                >
                   <p
                     className={`${styles.designText2} tracking-[5px] whitespace-nowrap  font-medium leading-[48px] cursor-pointer`}
                   >
@@ -83,7 +101,10 @@ const Project: React.FC = (): JSX.Element => {
                 >
                   GRAPHIC DESIGN
                 </p>
-                <div className="flex justify-center items-center">
+                <div
+                  onClick={() => router.push("/graphicDesign")}
+                  className="flex justify-center items-center"
+                >
                   <p
                     className={`${styles.designText2} tracking-[5px] whitespace-nowrap  font-medium leading-[48px] cursor-pointer`}
                   >
@@ -115,7 +136,10 @@ const Project: React.FC = (): JSX.Element => {
                 >
                   {item?.title}
                 </p>
-                <div className="flex justify-center items-center">
+                <div
+                  onClick={() => router.push(item.link)}
+                  className="flex justify-center items-center"
+                >
                   <p
                     className={`${styles.designText2} uppercase tracking-[5px] whitespace-nowrap  font-medium leading-[48px] cursor-pointer`}
                   >
