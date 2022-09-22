@@ -13,7 +13,7 @@ const items: { img: any; title: string; text: string }[] = [
   { img: graphic, title: "graphic design", text: "view Projects" },
 ];
 
-const Project = () => {
+const Project: React.FC = (): JSX.Element => {
   return (
     <section>
       <div className="container  md:px-[40px] xl:px-[165px] mt-[160px] md:pt-0 px-[24px] ">

@@ -1,14 +1,12 @@
-import { url } from "inspector";
 import React from "react";
-import circle from "../../assets/letstalk/circle.png";
 import styles from "./LetsTalk.module.scss";
 
-const LetsTalk = () => {
+const LetsTalk: React.FC = (): JSX.Element => {
   return (
     <section className="">
       <div className="container  md:px-[40px] xl:px-[165px] mt-[121px] md:pt-0 px-[24px] mb-[-200px] md:mb-[-100px] lg:mb-[-80px] relative z-20  ">
         <div
-          className={`${styles.bgImage} lg:h-[292px] w-full bg-red-400 rounded-[15px] lg:px-[95px]  py-[64px] md:py-[57px] lg:py-0  px-[24px]`}
+          className={`${styles.bgImage} lg:h-[292px] w-full  rounded-[15px] lg:px-[95px]  py-[64px] md:py-[57px] lg:py-0  px-[24px]`}
           // style={{
           //   backgroundImage: `url(${circle.src})`,
           //   backgroundSize: "contain",
@@ -19,7 +17,7 @@ const LetsTalk = () => {
           <div className="h-full w-full md:flex md:flex-col lg:flex-row md:items-center md:text-center lg:text-start">
             <div className="md:flex md:h-full md:flex-col md:justify-center">
               <p
-                className={`${styles.letsTalkTitle} text-center lg:text-start mx-auto lg:mx-0 w-[80%]  md:w-[40%] lg:w-[40%] leading-[40px] font-medium`}
+                className={`${styles.letsTalkTitle} text-center lg:text-start mx-auto lg:mx-0 w-[80%]  md:w-[40%] lg:w-[50%] xl:w-[40%] leading-[40px] font-medium`}
               >
                 Let’s talk about your project
               </p>

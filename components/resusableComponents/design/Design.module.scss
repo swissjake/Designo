@@ -1,0 +1,36 @@
+@import "../../../sass/index.scss";
+
+.container{
+    background-color: $primaryColor;
+    background-image: url(../../../assets/design/appdesign.png);
+            background-size: "contain";
+            background-position: "right";
+            background-repeat: "no-repeat";
+
+            @include devices(0px, 480px){
+                background-image: url(../../../assets/design/Oval.png);
+                        background-size: "contain";
+                        background-position: "right";
+                        background-repeat: "no-repeat";
+            }
+
+
+    &Title{
+        font-size: rem(48);
+        color: $white;
+
+        @include devices(0px, 480px){
+            font-size: rem(32);
+        }
+    }
+
+    &Text{
+        font-size: rem(16);
+        color:$white
+    }
+
+        @include devices(0px, 480px){
+            font-size: rem(15);
+        }
+  
+}

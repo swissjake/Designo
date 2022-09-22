@@ -17,6 +17,7 @@
     @include buttonStyle($white,$light);
 }
 .bgImage{
+    background-color: $primaryColor;
    
 
           @include devices(0px,480px){

@@ -5,7 +5,7 @@ import oval from "../../assets/homepage/oval.png";
 import phone from "../../assets/homepage/phone.png";
 import Image from "next/image";
 
-const AwardWinning = () => {
+const AwardWinning: React.FC = (): JSX.Element => {
   return (
     <section className="">
       <div className="relative container  md:px-[40px] xl:px-[165px] pt-[100px] md:pt-0 ">

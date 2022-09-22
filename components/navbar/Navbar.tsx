@@ -10,8 +10,8 @@ const navList: { name: string; ref: string }[] = [
   { name: "LOCATIONS", ref: "/" },
   { name: "CONTACT", ref: "/" },
 ];
-const Navbar = () => {
-  const [nav, setNav] = useState(false);
+const Navbar: React.FC = (): JSX.Element => {
+  const [nav, setNav] = useState<boolean>(false);
 
   return (
     <nav>

@@ -22,11 +22,11 @@ const items: { img: any; title: string; text: string }[] = [
     text: "We are a group of enthusiastic folks who know how to put people first. Our success depends on our customers, and we strive to give them the best experience a company can provide.",
   },
 ];
-const Passion = () => {
+const Passion: React.FC = (): JSX.Element => {
   return (
     <section>
       <div className="container  md:px-[40px] xl:px-[165px] mt-[160px] md:pt-0 px-[24px] ">
-        <div className="flex flex-col lg:flex-row  lg:justify-center items-center gap-y-[80px] md:gap-y-[32px] lg:gap-x-[30px]">
+        <div className="flex flex-col lg:flex-row lg:justify-center items-center gap-y-[80px] md:gap-y-[32px] lg:gap-x-[30px]">
           {items.map((item, index) => (
             <div
               className=" w-full flex flex-col md:flex-row lg:flex-col md:gap-x-[48px]   justify-between items-center  "
@@ -43,7 +43,7 @@ const Passion = () => {
                   alt="ksksk"
                 />
               </div>
-              <div className="text-center md:text-start lg:text-center md:w-[70%] lg:w-[350px]  mt-[48px] lg:mt-[48px] md:mt-0">
+              <div className="text-center md:text-start lg:text-center md:w-[70%] lg:w-[100%]  mt-[48px] lg:mt-[48px] md:mt-0">
                 <h1
                   className={`${styles.title} uppercase font-medium tracking-[5px]`}
                 >
