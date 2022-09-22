@@ -35,7 +35,7 @@ const images: { img: any }[] = [
 const Footer = () => {
   return (
     <section
-      className={`${styles.container} pt-[253px] md:pt-[173px] lg:pt-[144px] pb-[64px] md:pb-[80px] lg:pb-[72px] mt-[311px] md:mt-[380px]`}
+      className={`${styles.container} pt-[253px] md:pt-[173px] lg:pt-[144px] pb-[64px] md:pb-[80px] lg:pb-[72px] `}
     >
       <div className="relative container  md:px-[40px] xl:px-[165px] pt-[100px] md:pt-0 ">
         <div className="flex flex-col md:flex-row items-center justify-between text-white">

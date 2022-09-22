@@ -3,6 +3,10 @@
 .letsTalkTitle{
  font-size: rem(40);
  color: $white;
+
+ @include devices(0px,480px){
+    font-size: rem(32);
+ }
 }
 
 .letsTalkText{
@@ -11,4 +15,22 @@
 }
 .letsTalkButton{
     @include buttonStyle($white,$light);
+}
+.bgImage{
+   
+
+          @include devices(0px,480px){
+            background-image: url(../../assets/letstalk/mobileCircle.png);
+            background-size: "contain";
+            background-position: "right";
+            background-repeat: "no-repeat";
+        }
+
+       
+            background-image: url(../../assets/letstalk/circle.png);
+            background-size: "contain";
+            background-position: "right";
+            background-repeat: "no-repeat";
+          
+            
 }
