@@ -1,3 +1,30 @@
 @import "../../sass/index.scss";
 
+.worldClassContainer{
+    background-color: $cardLight;
 
+    @include devices(1400px, 100000px){
+        background: $cardLight;
+        background-image: url(../../assets/worldclass/circles.png);
+       
+    }
+}
+.worldClassTitle{
+    font-size: rem(48);
+    color: $primaryColor;
+
+
+    @include devices(0px, 480px){
+        font-size: rem(32);
+    }
+}
+
+.worldClassText{
+    font-size: rem(16);
+    color: $darkGray;
+
+
+    @include devices(0px, 480px){
+        font-size: rem(15);
+    }
+}

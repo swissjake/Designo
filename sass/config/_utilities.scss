@@ -32,6 +32,11 @@
     }
 }
 
+// @mixin devices ($minScreen) {
+//     @media (min-width:$minScreen) and (max-width: $screen) {
+//         @content;
+//     }
+// }
 @function rem($px, $default:16) {
     @return (math.div($px, $default) * 1rem)
 }
