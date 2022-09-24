@@ -3,15 +3,14 @@ import styles from "./About.module.scss";
 import img1 from "../../assets/aboutUs/img1.jpeg";
 import img2 from "../../assets/aboutUs/img2.png";
 import img3 from "../../assets/aboutUs/img3.png";
-import Image from "next/image";
 
-const AboutUs = () => {
+const AboutUs: React.FC = (): JSX.Element => {
   return (
     <section>
       <div className="container  md:px-[40px] xl:px-[165px] ">
         <div className="flex flex-col-reverse lg:flex-row ">
           <div
-            className={`${styles.bgImg} md:rounded-b-[15px] lg:rounded-l-[15px] py-[80px] md:py-[64px] lg:py-[135px] md:px-[58px] lg:px-[85px] lg:w-[58%] px-[24px] `}
+            className={`${styles.bgImg} md:rounded-b-[15px] lg:rounded-br-none  lg:rounded-l-[15px] py-[80px] md:py-[64px] lg:py-[135px] md:px-[58px] lg:px-[85px] lg:w-[58%] px-[24px]`}
           >
             <h1
               className={`${styles.aboutUsTitle} text-center lg:text-start font-medium leading-[36px] md:leading-[48px]`}
