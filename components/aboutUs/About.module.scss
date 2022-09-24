@@ -1,0 +1,24 @@
+@import "../../sass/index.scss";
+
+
+.bgImg{
+    background-color: $primaryColor;
+    background-image: url(../../assets/aboutUs/circle.png);
+}
+
+.aboutUsTitle{
+    font-size: rem(48);
+    color: $white;
+
+    @include devices(0px, 480px){
+        font-size: rem(32);
+    }
+}
+.aboutUsText{
+    font-size: rem(16);
+    color: $white;
+
+    @include devices(0px, 480px){
+        font-size: rem(15);
+    }
+}
