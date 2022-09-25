@@ -1,0 +1,16 @@
+@import "../../sass/index.scss";
+
+.locationTitle{
+    font-size: rem(20);
+    color: $darkGray;
+}
+
+.locationBtn{
+    @include buttonStyle($white, $primaryColor);
+    font-size: rem(15);
+    &:hover{
+        background-color: $light;
+        transition: all 0.5s ease-in-out;
+
+    }
+}

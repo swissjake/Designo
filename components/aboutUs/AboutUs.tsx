@@ -27,7 +27,13 @@ const AboutUs: React.FC = (): JSX.Element => {
               and digital experiences that connect with our clients’ audiences.
             </p>
           </div>
-          <img className="h-full hidden lg:block" src={img1.src} alt="image1" />
+          <div>
+            <img
+              className="h-full hidden lg:block"
+              src={img1.src}
+              alt="image1"
+            />
+          </div>
           <img
             className="h-full rounded-t-[15px] hidden md:block lg:hidden"
             src={img2.src}

@@ -7,6 +7,10 @@
  @include devices(0px,480px){
     font-size: rem(32);
  }
+
+ @include devices(480px,800px){
+    width: 50%;
+ }
 }
 
 .letsTalkText{

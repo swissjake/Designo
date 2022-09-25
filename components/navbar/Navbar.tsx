@@ -7,7 +7,7 @@ import { MdClose } from "react-icons/md";
 import { useRouter } from "next/router";
 
 const navList: { name: string; ref: string }[] = [
-  { name: "OUR COMPANY", ref: "/" },
+  { name: "OUR COMPANY", ref: "/aboutUs" },
   { name: "LOCATIONS", ref: "/" },
   { name: "CONTACT", ref: "/" },
 ];
@@ -36,6 +36,7 @@ const Navbar: React.FC = (): JSX.Element => {
             <ul className="flex">
               {navList?.map((item, index) => (
                 <li
+                  onClick={() => router.push(item.ref)}
                   className={`${styles.listItem} ml-[42px] cursor-pointer`}
                   key={index}
                 >

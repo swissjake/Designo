@@ -29,7 +29,7 @@ const WorldClassTalent: React.FC = (): JSX.Element => {
           </div>
 
           <div
-            className={`${styles.worldClassContainer} text-center lg:text-start bg-[#FDF3F0] rounded-r-[15px] lg:w-[100%] py-[80px] md:py-[64px] md:px-[58px] lg:py-[154px] lg:px-[94px] px-[24px]`}
+            className={`${styles.worldClassContainer} text-center lg:text-start lg:flex flex-col justify-center bg-[#FDF3F0] rounded-r-[15px] lg:w-[100%] py-[80px] md:py-[64px] md:px-[58px] lg:py-[154px] lg:px-[94px] px-[24px]`}
           >
             <h1
               className={`${styles.worldClassTitle} leading-[36px] md:leading-[48px]`}
