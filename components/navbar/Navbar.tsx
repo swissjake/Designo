@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 const navList: { name: string; ref: string }[] = [
   { name: "OUR COMPANY", ref: "/aboutUs" },
   { name: "LOCATIONS", ref: "/" },
-  { name: "CONTACT", ref: "/" },
+  { name: "CONTACT", ref: "/contact" },
 ];
 const Navbar: React.FC = (): JSX.Element => {
   const [nav, setNav] = useState<boolean>(false);
@@ -52,7 +52,12 @@ const Navbar: React.FC = (): JSX.Element => {
 
       <div className="bg-white w-full fixed z-50 md:hidden">
         <div className=" flex justify-between items-center my-[35px] px-[24px]">
-          <div onClick={() => router.push("/")}>
+          <div
+            onClick={() => {
+              router.push("/");
+              setNav(false);
+            }}
+          >
             <Image
               alt="logo"
               src={logo}
@@ -80,6 +85,10 @@ const Navbar: React.FC = (): JSX.Element => {
           <ul className={`${styles.mobileDropdown} py-[16px] px-[24px]`}>
             {navList?.map((item, index) => (
               <li
+                onClick={() => {
+                  router.push(item.ref);
+                  setNav(false);
+                }}
                 className={`${styles.moblieListItem} my-[32px] cursor-pointer`}
                 key={index}
               >

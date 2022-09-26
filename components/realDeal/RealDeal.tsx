@@ -10,9 +10,13 @@ const RealDeal = () => {
       <div className="container  md:px-[40px] xl:px-[165px] mt-[120px] lg:mt-[160px]">
         <div className="flex flex-col-reverse lg:flex-row">
           <div
-            className={` ${styles.realContainer} text-center lg:text-start flex flex-col justify-center md:rounded-b-[15px] lg:rounded-br-none py-[80px] md:py-[68px] lg:py-0 px-[24px] md:px-[58px] lg:px-[95px]`}
+            className={` ${styles.realContainer} text-center lg:text-start flex flex-col justify-center md:rounded-b-[15px] lg:rounded-br-none lg:rounded-l-[15px] py-[80px] md:py-[68px] lg:py-0 px-[24px] md:px-[58px] lg:px-[95px]`}
           >
-            <h1 className={`${styles.realTitle}`}>The real deal</h1>
+            <h1
+              className={`${styles.realTitle} md:leading-[48px] leading-[32px]`}
+            >
+              The real deal
+            </h1>
             <p
               className={`${styles.realText} leading-[25px] md:leading-[26px] mt-[24px] md:mt-[32px]`}
             >

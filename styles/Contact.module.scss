@@ -1,0 +1,64 @@
+@import "../sass/index.scss";
+
+.contact{
+    background-color: $primaryColor;
+
+    @include devices(1400px, 100000px){
+        background-image: url(../assets/mycontact/circle.png);
+       background-repeat: no-repeat;
+     
+    }
+
+
+    &Title{
+        font-size: rem(48);
+        color: $white;
+    
+    
+        @include devices(0px, 480px){
+            font-size: rem(32);
+        }
+    }
+
+    &Text{
+        font-size: rem(16);
+        color: $white;
+    
+    
+        @include devices(0px, 480px){
+            font-size: rem(15);
+        }
+    }
+}
+
+.contactInput{
+    background-color: $primaryColor;
+    border: none;
+    outline: none;
+    padding-left: 16px;
+    padding-bottom: 11px;
+    color: white;
+}
+.contactInput::placeholder{
+    color: rgba(255,255, 255, .5);
+    
+}
+
+.contactTextArea{
+    padding-bottom: 75px;
+    background-color: $primaryColor;
+    border: none;
+    outline: none;
+    padding-left: 16px;
+    color: white;
+}
+
+.contactTextArea::placeholder{
+    color: rgba(255,255, 255, .5);
+    
+}
+
+.contactBtn{
+    @include buttonStyle($darkGray, $white)
+}
+

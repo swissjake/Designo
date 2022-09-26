@@ -37,7 +37,7 @@ const WorldClassTalent: React.FC = (): JSX.Element => {
               World-class talent
             </h1>
             <p
-              className={`${styles.worldClassText} leading-[15px] md:leading-[26px] mt-[32px]`}
+              className={`${styles.worldClassText} leading-[25px] md:leading-[26px] mt-[32px]`}
             >
               We are a crew of strategists, problem-solvers, and technologists.
               Every design is thoughtfully crafted from concept to launch,
