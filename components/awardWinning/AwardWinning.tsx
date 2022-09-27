@@ -13,7 +13,7 @@ const AwardWinning: React.FC = (): JSX.Element => {
           <Image alt="rect" src={Rectangle1} />
         </div>
         <div
-          className={`${styles.container} relative h-fit lg:px-[95px] lg:rounded-[15px] overflow-hidden`}
+          className={`${styles.container} relative h-fit lg:px-[95px] lg:rounded-[15px] overflow-hidden px-[24px] md:px-0`}
         >
           <div className="absolute  lg:right-0 md:right-[-100px] md:bottom-[350px] lg:bottom-0">
             <Image alt="oval" src={oval} />
@@ -21,7 +21,7 @@ const AwardWinning: React.FC = (): JSX.Element => {
           <div className="flex flex-col lg:flex-row   justify-between">
             <div className="py-[145px] relative z-20">
               <h1
-                className={`${styles.containerHeader} text-center lg:text-start  mx-auto lg:mx-0 w-[70%]  lg:w-full font-medium leading-[36px] md:leading-[48px]`}
+                className={`${styles.containerHeader} text-center lg:text-start  mx-auto lg:mx-0 w-full md:w-[70%]  lg:w-[90%] font-medium leading-[36px] md:leading-[48px]`}
               >
                 Award-winning custom designs and digital branding solutions
               </h1>

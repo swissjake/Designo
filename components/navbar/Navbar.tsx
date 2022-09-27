@@ -69,9 +69,15 @@ const Navbar: React.FC = (): JSX.Element => {
           </div>
           <div>
             {!nav ? (
-              <BiMenu onClick={() => setNav(!nav)} className="w-8 h-8" />
+              <BiMenu
+                onClick={() => setNav(!nav)}
+                className="w-8 h-8 flex items-center"
+              />
             ) : (
-              <MdClose onClick={() => setNav(!nav)} className="w-8 h-8" />
+              <MdClose
+                onClick={() => setNav(!nav)}
+                className="w-8 h-8 flex items-center"
+              />
             )}
           </div>
         </div>
