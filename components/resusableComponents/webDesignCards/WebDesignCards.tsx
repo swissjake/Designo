@@ -11,7 +11,7 @@ interface Props {
 const WebDesignCards = ({ img, title, desc }: Props) => {
   return (
     <div className="flex flex-col md:flex-row lg:flex-col ">
-      <Image src={img} objectFit="contain" alt="express" />
+      <Image src={img.src} objectFit="contain" alt="express" />
 
       <div
         className={`${styles.container} mt-0 p-[32px] group hover:bg-[#E7816B] md:flex md:flex-col md:justify-center lg:rounded-b-[15px] transition-all duration-300 ease-in-out`}

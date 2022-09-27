@@ -10,7 +10,7 @@ const AwardWinning: React.FC = (): JSX.Element => {
     <section className="">
       <div className="relative container  md:px-[40px] xl:px-[165px] pt-[100px] md:pt-0 ">
         <div className="absolute top-[320px] left-0 hidden lg:block">
-          <Image alt="rect" src={Rectangle1} />
+          <Image alt="rect" src={Rectangle1.src} />
         </div>
         <div
           className={`${styles.container} relative h-fit lg:px-[95px] lg:rounded-[15px] overflow-hidden`}
@@ -43,7 +43,7 @@ const AwardWinning: React.FC = (): JSX.Element => {
                 className="w-[30%] h-[30%]"
                 objectFit="contain"
                 alt="phone"
-                src={phone}
+                src={phone.src}
               />
             </div>
           </div>
