@@ -1,6 +1,6 @@
 import React from "react";
 import express from "../../assets/webdesigncards/express.jpeg";
-import express2 from "../../assets/webdesigncards/express2.png";
+import express2 from "../../assets/webdesigncards/Express2.png";
 import WebDesignCards from "../resusableComponents/webDesignCards/WebDesignCards";
 
 const items: { img: any; title: string; desc: string }[] = [

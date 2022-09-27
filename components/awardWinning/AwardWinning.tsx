@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Award.module.scss";
 import Rectangle1 from "../../assets/homepage/Rectangle1.png";
-import oval from "../../assets/homepage/oval.png";
+import oval from "../../assets/homepage/Oval.png";
 import phone from "../../assets/homepage/phone.png";
 import Image from "next/image";
 
@@ -10,7 +10,7 @@ const AwardWinning: React.FC = (): JSX.Element => {
     <section className="">
       <div className="relative container  md:px-[40px] xl:px-[165px] pt-[100px] md:pt-0 ">
         <div className="absolute top-[320px] left-0 hidden lg:block">
-          <Image alt="rect" src={Rectangle1.src} />
+          <Image alt="rect" src={Rectangle1} />
         </div>
         <div
           className={`${styles.container} relative h-fit lg:px-[95px] lg:rounded-[15px] overflow-hidden`}
@@ -43,7 +43,7 @@ const AwardWinning: React.FC = (): JSX.Element => {
                 className="w-[30%] h-[30%]"
                 objectFit="contain"
                 alt="phone"
-                src={phone.src}
+                src={phone}
               />
             </div>
           </div>
