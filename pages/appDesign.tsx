@@ -3,7 +3,7 @@ import AppDesign from "../components/appDesign/AppDesign";
 import AppDesignCardList from "../components/appDesignCardList/AppDesignCardList";
 import AppWebDesign from "../components/appWebDesign/AppWebDesign";
 
-const appDesign = () => {
+const appDesign: React.FC = (): JSX.Element => {
   return (
     <div>
       <AppDesign />

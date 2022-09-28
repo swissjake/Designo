@@ -4,7 +4,7 @@ import Location from "../components/location/Location";
 import RealDeal from "../components/realDeal/RealDeal";
 import WorldClassTalent from "../components/worldClassTalent/WorldClassTalent";
 
-const aboutUs = () => {
+const aboutUs: React.FC = (): JSX.Element => {
   return (
     <div>
       <AboutUs />

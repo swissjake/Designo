@@ -36,7 +36,7 @@ const items: { img: any; title: string; desc: string }[] = [
   },
 ];
 
-const WebDesignCardList = () => {
+const WebDesignCardList: React.FC = (): JSX.Element => {
   return (
     <section>
       <div className="container mt-[96px] md:mt-[160px]  md:pt-0  md:px-[40px] xl:px-[165px] px-[24px]">

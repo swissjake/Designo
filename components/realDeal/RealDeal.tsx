@@ -4,7 +4,7 @@ import img1 from "../../assets/realdeal/img1.png";
 import img2 from "../../assets/realdeal/img2.jpeg";
 import img3 from "../../assets/realdeal/img3.jpeg";
 
-const RealDeal = () => {
+const RealDeal: React.FC = (): JSX.Element => {
   return (
     <section>
       <div className="container  md:px-[40px] xl:px-[165px] mt-[120px] lg:mt-[160px]">

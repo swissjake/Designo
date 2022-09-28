@@ -4,7 +4,7 @@ import WebDesignCards from "../components/resusableComponents/webDesignCards/Web
 import WebDesignCardList from "../components/webDesignCardList/WebDesignCardList";
 import AppWebDesign from "../components/appWebDesign/AppWebDesign";
 
-const webDesign = () => {
+const webDesign: React.FC = (): JSX.Element => {
   return (
     <div>
       <WebDesign />

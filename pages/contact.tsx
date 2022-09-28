@@ -2,7 +2,7 @@ import React from "react";
 import Location from "../components/location/Location";
 import styles from "../styles/Contact.module.scss";
 
-const contact = () => {
+const contact: React.FC = (): JSX.Element => {
   return (
     <section>
       <div className="container  md:px-[40px] xl:px-[165px] pt-[100px] md:pt-0">

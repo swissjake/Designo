@@ -20,7 +20,7 @@ const items: { img: any; title: string; desc: string }[] = [
     desc: "A multi-carrier shipping website for ecommerce businesses",
   },
 ];
-const GraphicCardList = () => {
+const GraphicCardList: React.FC = (): JSX.Element => {
   return (
     <section>
       <div className="container mt-[96px] md:mt-[160px]  md:pt-0  md:px-[40px] xl:px-[165px] px-[24px]">
