@@ -3,16 +3,20 @@ import React from "react";
 import Location from "../components/location/Location";
 import styles from "../styles/Contact.module.scss";
 import contactBg from "../assets/backrounds/contactBg.png";
+// import circlemd from "../assets/mycontact/circlemd.png";
 
 const contact: React.FC = (): JSX.Element => {
   return (
     <section>
-      <div className="relative container  md:px-[40px] xl:px-[165px] pt-[100px] md:pt-0">
+      <div className="relative container  md:px-[40px] xl:px-[165px] pt-[100px] md:pt-0 ">
         <div
-          className={`${styles.contact} md:rounded-[15px] px-[24px] md:px-[58px] lg:px-0 py-[71px] lg:py-0 `}
+          className={`${styles.contact} relative md:rounded-[15px] px-[24px] md:px-[58px] lg:px-0 py-[71px] lg:py-0 `}
         >
+          {/* <div className="hidden md:block lg:hidden absolute top-0 left-0">
+            <Image src={circlemd} alt="image" objectFit="contain" />
+          </div> */}
           <div className="flex flex-col lg:flex-row text-center md:text-start">
-            <div className="flex flex-col justify-center lg:py-[135px] lg:px-[95px]">
+            <div className="relative z-10 flex flex-col justify-center lg:py-[135px] lg:px-[95px]">
               <h1 className={`${styles.contactTitle} md:leading-[48px]`}>
                 Contact Us
               </h1>
@@ -26,11 +30,11 @@ const contact: React.FC = (): JSX.Element => {
               </p>
             </div>
             <div className="block lg:py-[55px] lg:pr-[95px] lg:w-[100%] mt-[48px] md:mt-[40px] lg:mt-0">
-              <form action="">
+              <form className="relative z-10" action="">
                 <div className="flex flex-col gap-y-[25px]">
                   <div className="flex w-full  border-b-2 border-white">
                     <input
-                      className={`${styles.contactInput} flex-1`}
+                      className={`${styles.contactInput} flex-1 bg-transparent`}
                       type="text"
                       placeholder="Name"
                     />

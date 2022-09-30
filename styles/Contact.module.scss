@@ -3,6 +3,13 @@
 .contact{
     background-color: $primaryColor;
 
+    @include devices(480px, 1200px){
+        background-image: url(../assets/mycontact/circlemd.png);
+       background-repeat: no-repeat;
+      
+     
+    }
+
     @include devices(1400px, 100000px){
         background-image: url(../assets/mycontact/circle.png);
        background-repeat: no-repeat;
@@ -32,7 +39,7 @@
 }
 
 .contactInput{
-    background-color: $primaryColor;
+    background-color: transparent;
     border: none;
     outline: none;
     padding-left: 16px;
@@ -46,7 +53,7 @@
 
 .contactTextArea{
     padding-bottom: 75px;
-    background-color: $primaryColor;
+    background-color: transparent;
     border: none;
     outline: none;
     padding-left: 16px;
