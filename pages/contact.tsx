@@ -1,11 +1,13 @@
+import Image from "next/image";
 import React from "react";
 import Location from "../components/location/Location";
 import styles from "../styles/Contact.module.scss";
+import contactBg from "../assets/backrounds/contactBg.png";
 
 const contact: React.FC = (): JSX.Element => {
   return (
     <section>
-      <div className="container  md:px-[40px] xl:px-[165px] pt-[100px] md:pt-0">
+      <div className="relative container  md:px-[40px] xl:px-[165px] pt-[100px] md:pt-0">
         <div
           className={`${styles.contact} md:rounded-[15px] px-[24px] md:px-[58px] lg:px-0 py-[71px] lg:py-0 `}
         >
@@ -60,6 +62,9 @@ const contact: React.FC = (): JSX.Element => {
               </form>
             </div>
           </div>
+        </div>
+        <div className="hidden lg:block absolute top-[800px] z-[-1] right-0">
+          <Image src={contactBg} alt="image" objectFit="contain" />
         </div>
       </div>
       <Location />

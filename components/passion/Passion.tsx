@@ -4,6 +4,7 @@ import passion1 from "../../assets/passion/passion1.png";
 import passion2 from "../../assets/passion/passion2.png";
 import passion3 from "../../assets/passion/passion3.png";
 import styles from "./Passion.module.scss";
+import passionBg from "../../assets/backrounds/passionBg.png";
 
 const items: { img: any; title: string; text: string }[] = [
   {
@@ -25,7 +26,10 @@ const items: { img: any; title: string; text: string }[] = [
 const Passion: React.FC = (): JSX.Element => {
   return (
     <section>
-      <div className="container  md:px-[40px] xl:px-[165px] mt-[160px] md:pt-0 px-[24px] ">
+      <div className="relative container  md:px-[40px] xl:px-[165px] mt-[160px] md:pt-0 px-[24px] ">
+        <div className="hidden lg:block absolute top-[124px] z-[-1] right-0">
+          <Image src={passionBg} alt="image" objectFit="contain" />
+        </div>
         <div className="flex flex-col lg:flex-row lg:justify-center items-center gap-y-[80px] md:gap-y-[32px] lg:gap-x-[30px]">
           {items.map((item, index) => (
             <div

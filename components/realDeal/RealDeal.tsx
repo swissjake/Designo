@@ -3,11 +3,16 @@ import styles from "./RealDeal.module.scss";
 import img1 from "../../assets/realdeal/img1.png";
 import img2 from "../../assets/realdeal/img2.jpeg";
 import img3 from "../../assets/realdeal/img3.jpeg";
+import Image from "next/image";
+import aboutBg1 from "../../assets/backrounds/aboutusBg1.png";
 
 const RealDeal: React.FC = (): JSX.Element => {
   return (
     <section>
-      <div className="container  md:px-[40px] xl:px-[165px] mt-[120px] lg:mt-[160px]">
+      <div className=" relative container  md:px-[40px] xl:px-[165px] mt-[120px] lg:mt-[160px]">
+        <div className="hidden lg:block absolute bottom-[388px] z-[-1] right-0">
+          <Image src={aboutBg1} alt="image" objectFit="contain" />
+        </div>
         <div className="flex flex-col-reverse lg:flex-row">
           <div
             className={` ${styles.realContainer} text-center lg:text-start flex flex-col justify-center md:rounded-b-[15px] lg:rounded-br-none lg:rounded-l-[15px] py-[80px] md:py-[68px] lg:py-0 px-[24px] md:px-[58px] lg:px-[95px]`}

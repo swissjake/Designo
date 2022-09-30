@@ -1,23 +1,30 @@
 import React from "react";
-import express from "../../assets/webdesigncards/express.jpeg";
-import express2 from "../../assets/webdesigncards/Express2.png";
+import timbrown from "../../assets/webdesigncards/timbrown.jpeg";
+import boxed from "../../assets/webdesigncards/boxed.jpeg";
+import science from "../../assets/webdesigncards/science.jpeg";
+import timbrownmb from "../../assets/webdesigncards/timbrownmb.png";
+import boxedmb from "../../assets/webdesigncards/boxedmb.png";
+import sciencemb from "../../assets/webdesigncards/sciencemb.png";
 import WebDesignCards from "../resusableComponents/webDesignCards/WebDesignCards";
 
-const items: { img: any; title: string; desc: string }[] = [
+const items: { mobileImg: any; img: any; title: string; desc: string }[] = [
   {
-    img: express,
-    title: "express",
-    desc: "A multi-carrier shipping website for ecommerce businesses",
+    img: timbrown,
+    mobileImg: timbrownmb,
+    title: "tim brown",
+    desc: "A book cover designed for Tim Brown’s new release, ‘Change’",
   },
   {
-    img: express2,
-    title: "Transfer",
-    desc: "A multi-carrier shipping website for ecommerce businesses",
+    img: boxed,
+    mobileImg: boxedmb,
+    title: "boxed water",
+    desc: "A simple packaging concept made for Boxed Water",
   },
   {
-    img: express,
-    title: "express",
-    desc: "A multi-carrier shipping website for ecommerce businesses",
+    img: science,
+    mobileImg: sciencemb,
+    title: "science",
+    desc: "A poster made in collaboration with the Federal Art Project",
   },
 ];
 const GraphicCardList: React.FC = (): JSX.Element => {

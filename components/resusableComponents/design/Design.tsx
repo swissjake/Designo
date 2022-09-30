@@ -1,5 +1,7 @@
+import Image from "next/image";
 import React from "react";
 import styles from "./Design.module.scss";
+import designBg from "../../../assets/backrounds/designBg.png";
 
 interface Props {
   title: string;
@@ -9,7 +11,10 @@ interface Props {
 const Design = ({ title, text }: Props): JSX.Element => {
   return (
     <section>
-      <div className="container pt-[100px] md:pt-0  md:px-[40px] xl:px-[165px]">
+      <div className="relative container pt-[100px] md:pt-0  md:px-[40px] xl:px-[165px]">
+        <div className="hidden lg:block absolute top-[126px]  z-[-1] left-0">
+          <Image src={designBg} alt="image" objectFit="contain" />
+        </div>
         <div
           className={`${styles.container} py-[64px] md:rounded-[15px] px-[24px] md:px-0`}
         >

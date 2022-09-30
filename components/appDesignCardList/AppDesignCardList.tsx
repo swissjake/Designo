@@ -1,33 +1,46 @@
 import React from "react";
-import express from "../../assets/webdesigncards/express.jpeg";
-import express2 from "../../assets/webdesigncards/Express2.png";
+import filter from "../../assets/webdesigncards/filter.jpeg";
+import eye from "../../assets/webdesigncards/eye.jpeg";
+import face from "../../assets/webdesigncards/face.jpeg";
+import todo from "../../assets/webdesigncards/todo.jpeg";
+import studio from "../../assets/webdesigncards/studio.jpeg";
+import filtermb from "../../assets/webdesigncards/filtermb.png";
+import eyemb from "../../assets/webdesigncards/eyemb.png";
+import facemb from "../../assets/webdesigncards/facemb.png";
+import todomb from "../../assets/webdesigncards/todomb.png";
+import studiomb from "../../assets/webdesigncards/studiomb.png";
 import WebDesignCards from "../resusableComponents/webDesignCards/WebDesignCards";
 
-const items: { img: any; title: string; desc: string }[] = [
+const items: { mobileImg: any; img: any; title: string; desc: string }[] = [
   {
-    img: express,
-    title: "express",
-    desc: "A multi-carrier shipping website for ecommerce businesses",
+    img: filter,
+    mobileImg: filtermb,
+    title: "airfilter",
+    desc: "Solving the problem of poor indoor air quality by filtering the air",
   },
   {
-    img: express2,
-    title: "Transfer",
-    desc: "A multi-carrier shipping website for ecommerce businesses",
+    img: eye,
+    mobileImg: eyemb,
+    title: "eyecam",
+    desc: "Product that lets you edit your favorite photos and videos at any time",
   },
   {
-    img: express,
-    title: "express",
-    desc: "A multi-carrier shipping website for ecommerce businesses",
+    img: face,
+    mobileImg: facemb,
+    title: "faceit",
+    desc: "Get to meet your favorite internet superstar with the faceit app",
   },
   {
-    img: express,
-    title: "express",
-    desc: "A multi-carrier shipping website for ecommerce businesses",
+    img: todo,
+    mobileImg: todomb,
+    title: "todo",
+    desc: "A todo app that features cloud sync with light and dark mode",
   },
   {
-    img: express,
-    title: "express",
-    desc: "A multi-carrier shipping website for ecommerce businesses",
+    img: studio,
+    mobileImg: studiomb,
+    title: "loopstudios",
+    desc: "A VR experience app made for Loopstudios",
   },
 ];
 const AppDesignCardList = () => {

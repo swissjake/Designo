@@ -1,0 +1,16 @@
+@import "../sass/index.scss";
+
+.container{
+    background-color: $cardLight;
+}
+
+.contactTitle{
+    font-size: rem(40);
+    color: $primaryColor;
+}
+
+.contactText{
+    font-size: rem(16);
+    color: $darkGray;
+
+}

@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 
 const navList: { name: string; ref: string }[] = [
   { name: "OUR COMPANY", ref: "/aboutUs" },
-  { name: "LOCATIONS", ref: "/" },
+  { name: "LOCATIONS", ref: "/location" },
   { name: "CONTACT", ref: "/contact" },
 ];
 const Navbar: React.FC = (): JSX.Element => {
