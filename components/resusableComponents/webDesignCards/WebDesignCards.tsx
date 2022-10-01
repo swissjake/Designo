@@ -31,7 +31,7 @@ const WebDesignCards = ({ img, title, desc, mobileImg }: Props) => {
         </div>
 
         <div
-          className={`${styles.container} w-full mt-0 p-[32px] group hover:bg-[#E7816B] md:flex md:flex-col md:justify-center rounded-b-[15px] md:rounded-r-[15px] lg:rounded-r-none md:rounded-b-none lg:rounded-b-[15px] transition-all duration-300 ease-in-out`}
+          className={`${styles.container} w-full mt-0 p-[32px] group hover:bg-[#E7816B] md:flex md:flex-col md:justify-center rounded-b-[15px] md:rounded-r-[15px] lg:rounded-tr-none md:rounded-b-none lg:rounded-b-[15px] transition-all duration-300 ease-in-out`}
         >
           <h1
             className={`${styles.containerTitle} text-center group-hover:text-white  tracking-[5px] font-medium uppercase leading-[26px]`}

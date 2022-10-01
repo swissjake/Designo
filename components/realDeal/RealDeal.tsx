@@ -43,6 +43,7 @@ const RealDeal: React.FC = (): JSX.Element => {
             src={img1.src}
             alt=""
           />
+
           <img
             className="  w-[100%] hidden md:block lg:hidden rounded-t-[15px]"
             src={img2.src}
