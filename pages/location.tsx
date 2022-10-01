@@ -46,8 +46,8 @@ const location: React.FC = (): JSX.Element => {
           return (
             <div
               className={`w-full flex flex-col-reverse ${
-                index % 2 === 0 ? "lg:flex-row-reverse" : "lg:flex-row"
-              } mb-[40px] md:mb-[120px] lg:mt-[32px] gap-x-[30px]`}
+                index % 2 !== 0 ? "lg:flex-row-reverse" : "lg:flex-row"
+              } mb-[40px] md:mb-[120px] lg:mb-[32px] gap-x-[30px]`}
               key={index}
             >
               <div
