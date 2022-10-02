@@ -18,7 +18,7 @@
     color: white;
 }
 .letsTalkButton{
-    @include buttonStyle($white,$light);
+    @include buttonStyle($darkGray, $white);
 }
 .bgImage{
     background-color: $primaryColor;

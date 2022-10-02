@@ -19,7 +19,7 @@
        
     }
     &Button{
-        @include buttonStyle($white,$light);
+        @include buttonStyle($darkGray, $white);
        
         
     }

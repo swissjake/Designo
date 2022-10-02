@@ -8,9 +8,9 @@
 .locationBtn{
     @include buttonStyle($white, $primaryColor);
     font-size: rem(15);
-    &:hover{
-        background-color: $light;
-        transition: all 0.5s ease-in-out;
+    // &:hover{
+    //     background-color: $light;
+        
 
-    }
+    // }
 }

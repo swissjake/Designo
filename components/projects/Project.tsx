@@ -31,12 +31,12 @@ const Project: React.FC = (): JSX.Element => {
       <div className="container  md:px-[40px] xl:px-[165px] mt-[160px] md:pt-0 px-[24px] ">
         <div className="lg:flex flex-col lg:flex-row lg:items-center hidden ">
           {/* THE FIRST SECTION */}
-          <div className="flex relative">
+          <div className="flex relative group ">
             {/* FOR DESKTOP */}
 
             <Image alt="web design" objectFit="contain" src={web} />
 
-            <div className="absolute text-center left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
+            <div className="z-10 absolute text-center left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
               <p
                 className={`${styles.designText} tracking-[2px] whitespace-nowrap  font-medium leading-[48px]`}
               >
@@ -54,11 +54,12 @@ const Project: React.FC = (): JSX.Element => {
                 <FiChevronRight className="ml-[21px] text-[#E7816B]" />
               </div>
             </div>
+            <div className="absolute top-0 left-0 right-0 bottom-0 opacity-70 lg:group-hover:bg-[#E7816B] transition-all duration-200 ease-in-out  rounded-[15px]" />
           </div>
 
           {/* second container */}
-          <div className="flex flex-col justify-center items-center ml-[24px]">
-            <div className="w-[100%] relative mb-[20px]">
+          <div className="flex flex-col justify-center items-center  ml-[24px]">
+            <div className="w-[100%] relative mb-[20px] group">
               <Image
                 className="w-screen"
                 alt="web design"
@@ -67,7 +68,7 @@ const Project: React.FC = (): JSX.Element => {
                 src={app}
               />
 
-              <div className="absolute text-center left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
+              <div className="z-10 absolute text-center left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
                 <p
                   className={`${styles.designText} tracking-[2px] whitespace-nowrap  font-medium leading-[48px]`}
                 >
@@ -85,17 +86,18 @@ const Project: React.FC = (): JSX.Element => {
                   <FiChevronRight className="ml-[21px] text-[#E7816B]" />
                 </div>
               </div>
+              <div className="absolute top-0 left-0 right-0 bottom-1.5 opacity-70 lg:group-hover:bg-[#E7816B] transition-all duration-200 ease-in-out  rounded-[15px]" />
             </div>
 
             {/* GRAPHIC DESIGN SECTION */}
-            <div className="relative">
+            <div className="z-10 relative group">
               <Image
                 className=""
                 alt="web design"
                 objectFit="contain"
                 src={graphic}
               />
-              <div className="absolute text-center left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
+              <div className="z-10 absolute text-center left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
                 <p
                   className={`${styles.designText} tracking-[2px] whitespace-nowrap  font-medium leading-[48px]`}
                 >
@@ -113,6 +115,7 @@ const Project: React.FC = (): JSX.Element => {
                   <FiChevronRight className="ml-[21px] text-[#E7816B]" />
                 </div>
               </div>
+              <div className="absolute top-0 left-0 right-0 bottom-1.5 opacity-70 lg:group-hover:bg-[#E7816B] transition-all duration-200 ease-in-out  rounded-[15px]" />
             </div>
           </div>
         </div>

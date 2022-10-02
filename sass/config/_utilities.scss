@@ -24,6 +24,11 @@
     letter-spacing: 1px;
     color: $color;
     background-color: $backgroundColor;
+
+    &:hover{
+        background-color: $light;
+        transition: .2s ease-in-out;
+    }
 }
 
 @mixin devices ($minScreen,$screen) {
