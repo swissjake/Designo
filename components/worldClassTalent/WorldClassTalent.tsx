@@ -2,7 +2,7 @@ import React from "react";
 import img2 from "../../assets/worldclass/img2.jpeg";
 import img4 from "../../assets/worldclass/img4.png";
 import img3 from "../../assets/worldclass/img2.png";
-import img1 from "../../assets/worldclass/img1.png";
+import pics from "../../assets/worldclass/pics.png";
 import styles from "./WorldClass.module.scss";
 
 const WorldClassTalent: React.FC = (): JSX.Element => {
@@ -10,10 +10,10 @@ const WorldClassTalent: React.FC = (): JSX.Element => {
     <section>
       <div className="container  md:px-[40px] xl:px-[165px] md:mt-[120px] lg:mt-[160px]">
         <div className="flex flex-col lg:flex-row ">
-          <div className="hidden lg:block">
+          <div className="hidden lg:block w-[100%]">
             <img
               className="md:h-[30%] lg:h-[100%]  w-[100%] rounded-l-[15px]"
-              src="https://s3-alpha-sig.figma.com/img/fd79/b861/337c1cc7527c9150f98e0fb1f639b0c8?Expires=1664755200&Signature=RVkGfVqXdr0TZ08MFFeQYPsXBI-No8jpebW9r1Q-cseEBUEodP-CxgIoXVJJldMBjzX0bk3jMMGYtssOEKs~rtC7EXsevXe~UrypinhAeYK-92mlatWP9sS1EAiZYaIBzXxrHjklRZZJMQWJZ66OGrwwHr8p24fMOPKwGqrmsbx37x7AOJOt27Y2lN-8kGygLN6Oml7qUrxKx6UM6kT~C2eNIcWUrtZO2MItLkJUtudMaX0QSBzATgI-3kasE4SLaKArxs5O9MZT9lO2RMjWbaPIPryyBqZ8Z~hCdD-OurUG8QzqMALYK-zoVlOnsp9n2LZphi3jBkpFnOmY8H-j4w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+              src={pics.src}
               alt="image"
             />
           </div>
@@ -29,7 +29,7 @@ const WorldClassTalent: React.FC = (): JSX.Element => {
           </div>
 
           <div
-            className={`${styles.worldClassContainer} text-center lg:text-start lg:flex flex-col justify-center bg-[#FDF3F0] rounded-r-[15px] lg:w-[100%] py-[80px] md:py-[64px] md:px-[58px] lg:py-[154px] lg:px-[94px] px-[24px]`}
+            className={`${styles.worldClassContainer} text-center lg:text-start lg:flex flex-col justify-center bg-[#FDF3F0] md:rounded-bl-[15px] lg:rounded-bl-none rounded-r-[15px] lg:w-[100%] py-[80px] md:py-[64px] md:px-[58px] lg:py-[154px] lg:px-[94px] px-[24px]`}
           >
             <h1
               className={`${styles.worldClassTitle} leading-[36px] md:leading-[48px]`}

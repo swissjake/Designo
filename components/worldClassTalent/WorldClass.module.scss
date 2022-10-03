@@ -6,6 +6,8 @@
     @include devices(1400px, 100000px){
         background: $cardLight;
         background-image: url(../../assets/worldclass/circles.png);
+        background-repeat: no-repeat;
+        background-position: bottom;
        
     }
 }

@@ -15,7 +15,7 @@ const RealDeal: React.FC = (): JSX.Element => {
         </div>
         <div className="flex flex-col-reverse lg:flex-row">
           <div
-            className={` ${styles.realContainer} text-center lg:text-start flex flex-col justify-center md:rounded-b-[15px] lg:rounded-br-none lg:rounded-l-[15px] py-[80px] md:py-[68px] lg:py-0 px-[24px] md:px-[58px] lg:px-[95px]`}
+            className={` ${styles.realContainer} lg:w-[100%] text-center lg:text-start flex flex-col justify-center md:rounded-b-[15px] lg:rounded-br-none lg:rounded-l-[15px] py-[80px] md:py-[68px] lg:py-[154px] px-[24px] md:px-[58px] lg:px-[95px]`}
           >
             <h1
               className={`${styles.realTitle} md:leading-[48px] leading-[32px]`}
