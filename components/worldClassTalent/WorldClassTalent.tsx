@@ -1,5 +1,4 @@
 import React from "react";
-import img2 from "../../assets/worldclass/img2.jpeg";
 import img4 from "../../assets/worldclass/img4.png";
 import img3 from "../../assets/worldclass/img2.png";
 import pics from "../../assets/worldclass/pics.png";
