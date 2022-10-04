@@ -62,7 +62,7 @@ const location: React.FC = (): JSX.Element => {
                       } left-[50%]  top-[50%] translate-x-[-50%] translate-y-[-50%] text-center md:text-start`}
                     >
                       <h1
-                        className={`${styles.contactTitle} whitespace-nowrap leading-[36px] md:leading-[48px] font-medium`}
+                        className={`${styles.contactTitle} capitalize whitespace-nowrap leading-[36px] md:leading-[48px] font-medium`}
                       >
                         {item.country}
                       </h1>
