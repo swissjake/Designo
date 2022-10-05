@@ -7,12 +7,6 @@ const LetsTalk: React.FC = (): JSX.Element => {
       <div className="container  md:px-[40px] xl:px-[165px] mt-[121px] md:pt-0 px-[24px] mb-[-200px] md:mb-[-100px] lg:mb-[-80px] relative z-20  ">
         <div
           className={`${styles.bgImage} lg:h-[292px] w-full  rounded-[15px] lg:px-[95px]  py-[64px] md:py-[57px] lg:py-0  px-[24px]`}
-          // style={{
-          //   backgroundImage: `url(${circle.src})`,
-          //   backgroundSize: "contain",
-          //   backgroundPosition: "right",
-          //   backgroundRepeat: "no-repeat",
-          // }}
         >
           <div className="h-full w-full md:flex md:flex-col lg:flex-row md:items-center md:text-center lg:text-start">
             <div className="md:flex md:h-full md:flex-col md:justify-center">
