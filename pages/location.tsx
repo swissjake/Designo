@@ -1,9 +1,12 @@
-import React from "react";
 import styles from "../styles/Location.module.scss";
-import map1 from "../assets/maps/map1.png";
+// import map1 from "../assets/maps/map1.png";
 import circle from "../assets/maps/circle.png";
-import imgBg from "../assets/maps/imgBg.png";
+import pointer from "../assets/location/pointer.jpeg";
+// import imgBg from "../assets/maps/imgBg.png";
 import Image from "next/image";
+import * as React from "react";
+import Map, { Marker } from "react-map-gl";
+import "mapbox-gl/dist/mapbox-gl.css";
 
 const items: {
   country: string;
@@ -38,7 +41,35 @@ const items: {
     email: "M : contact@designo.uk",
   },
 ];
-const location: React.FC = (): JSX.Element => {
+const location = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [viewState, setViewState] = React.useState<any>({
+    width: "100%",
+    height: "100%",
+    longitude: 149.7857846,
+    latitude: -30.3295596,
+    zoom: 3,
+    pitch: 50,
+  });
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [viewStateCA, setViewStateCA] = React.useState<any>({
+    width: "100%",
+    height: "100%",
+    longitude: -79.39403514667968,
+    latitude: 43.64410556315492,
+    zoom: 1,
+    pitch: 50,
+  });
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [viewStateUK, setViewStateUK] = React.useState<any>({
+    width: "100%",
+    height: "100%",
+    longitude: -1.3423286588397654,
+    latitude: 53.71006892764715,
+    zoom: 3,
+    pitch: 50,
+  });
+
   return (
     <section>
       <div className="container  md:px-[40px] xl:px-[165px] pt-[100px] md:pt-0">
@@ -97,10 +128,54 @@ const location: React.FC = (): JSX.Element => {
                 </div>
               </div>
               {/* MAPS */}
-              <div className="relative hidden lg:block lg:w-[50%] ">
-                <Image src={map1} alt="map" layout="fill" />
-              </div>
-              <div className="flex hidden md:block lg:hidden md:mb-[32px]">
+
+              {index === 0 && (
+                <div className="w-full h-[400px] md:h-[326px] lg:h-[298px] md:mb-[32px] lg:w-[50%] md:rounded-[15px] md:overflow-hidden ">
+                  {/* <Image src={map1} alt="map" layout="fill" /> */}
+                  <Map
+                    {...viewStateCA}
+                    onViewportChange={() => setViewStateCA(viewStateCA)}
+                    mapboxAccessToken={process.env.NEXT_PUBLIC_TOKEN}
+                    mapStyle="mapbox://styles/mapbox/streets-v9"
+                  />
+                  {/* <Marker
+                      longitude={-79.39567451901912}
+                      latitude={43.64501882482561}
+                      anchor="bottom"
+                    >
+                      <Image
+                        src="https://toppng.com/uploads/preview/map-point-google-map-marker-gif-11562858751s4qufnxuml.png"
+                        height={30}
+                        width={30}
+                        alt="pointer"
+                      />
+                    </Marker> */}
+                </div>
+              )}
+              {index === 1 && (
+                <div className="w-full h-[400px] md:h-[326px] lg:h-[298px] md:mb-[32px] lg:w-[50%] md:rounded-[15px] md:overflow-hidden ">
+                  {/* <Image src={map1} alt="map" layout="fill" /> */}
+                  <Map
+                    {...viewState}
+                    onViewportChange={() => setViewState(viewState)}
+                    mapboxAccessToken={process.env.NEXT_PUBLIC_TOKEN}
+                    mapStyle="mapbox://styles/mapbox/streets-v9"
+                  />
+                </div>
+              )}
+              {index === 2 && (
+                <div className="w-full h-[400px] md:h-[326px] lg:h-[298px] md:mb-[32px] lg:w-[50%] md:rounded-[15px] md:overflow-hidden ">
+                  {/* <Image src={map1} alt="map" layout="fill" /> */}
+                  <Map
+                    {...viewStateUK}
+                    onViewportChange={() => setViewStateUK(viewStateUK)}
+                    mapboxAccessToken={process.env.NEXT_PUBLIC_TOKEN}
+                    mapStyle="mapbox://styles/mapbox/streets-v9"
+                  />
+                </div>
+              )}
+
+              {/* <div className="flex hidden md:block lg:hidden md:mb-[32px]">
                 <Image
                   className=""
                   width={1000}
@@ -117,7 +192,7 @@ const location: React.FC = (): JSX.Element => {
                   src={imgBg}
                   alt="map"
                 />
-              </div>
+              </div> */}
             </div>
           );
         })}
