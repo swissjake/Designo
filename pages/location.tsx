@@ -48,7 +48,7 @@ const location = () => {
     height: "100%",
     longitude: 149.7857846,
     latitude: -30.3295596,
-    zoom: 3,
+    zoom: 12,
     pitch: 50,
   });
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -57,7 +57,7 @@ const location = () => {
     height: "100%",
     longitude: -79.39403514667968,
     latitude: 43.64410556315492,
-    zoom: 1,
+    zoom: 12,
     pitch: 50,
   });
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -66,13 +66,13 @@ const location = () => {
     height: "100%",
     longitude: -1.3423286588397654,
     latitude: 53.71006892764715,
-    zoom: 3,
+    zoom: 12,
     pitch: 50,
   });
 
   return (
     <section>
-      <div className="container  md:px-[40px] xl:px-[165px] pt-[100px] md:pt-0">
+      <div className="container  md:px-[40px] xl:px-[165px] pt-[34px] md:pt-0">
         {items.map((item, index) => {
           return (
             <div
@@ -130,7 +130,7 @@ const location = () => {
               {/* MAPS */}
 
               {index === 0 && (
-                <div className="w-full h-[400px] md:h-[326px] lg:h-[298px] md:mb-[32px] lg:w-[50%] md:rounded-[15px] md:overflow-hidden ">
+                <div className="w-full h-[400px] md:h-[326px] lg:h-[298px] md:mb-[32px] lg:w-[50%] md:rounded-[15px] overflow-hidden ">
                   {/* <Image src={map1} alt="map" layout="fill" /> */}
                   <Map
                     {...viewStateCA}
@@ -153,7 +153,7 @@ const location = () => {
                 </div>
               )}
               {index === 1 && (
-                <div className="w-full h-[400px] md:h-[326px] lg:h-[298px] md:mb-[32px] lg:w-[50%] md:rounded-[15px] md:overflow-hidden ">
+                <div className="w-full h-[400px] md:h-[326px] lg:h-[298px] md:mb-[32px] lg:w-[50%] md:rounded-[15px] overflow-hidden ">
                   {/* <Image src={map1} alt="map" layout="fill" /> */}
                   <Map
                     {...viewState}
@@ -164,7 +164,7 @@ const location = () => {
                 </div>
               )}
               {index === 2 && (
-                <div className="w-full h-[400px] md:h-[326px] lg:h-[298px] md:mb-[32px] lg:w-[50%] md:rounded-[15px] md:overflow-hidden ">
+                <div className="w-full h-[400px] md:h-[326px] lg:h-[298px] md:mb-[32px] lg:w-[50%] md:rounded-[15px] overflow-hidden ">
                   {/* <Image src={map1} alt="map" layout="fill" /> */}
                   <Map
                     {...viewStateUK}
