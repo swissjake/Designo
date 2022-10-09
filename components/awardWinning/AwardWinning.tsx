@@ -10,13 +10,13 @@ const AwardWinning: React.FC = (): JSX.Element => {
     <section className="">
       <div className="relative container  md:px-[40px] xl:px-[165px] pt-[100px] md:pt-0 ">
         <div className="absolute top-[320px] left-0 hidden lg:block">
-          <Image alt="rect" src={Rectangle1} role="rectangle" />
+          <Image alt="rect" src={Rectangle1} role="image" />
         </div>
         <div
           className={`${styles.container} relative h-fit lg:px-[95px] lg:rounded-[15px] overflow-hidden px-[24px] md:px-0`}
         >
           <div className="absolute  lg:right-0 md:right-[-100px] md:bottom-[350px] lg:bottom-0">
-            <Image alt="oval" src={oval} role="oval" />
+            <Image alt="oval" src={oval} role="image" />
           </div>
           <div className="flex flex-col lg:flex-row   justify-between">
             <div className="py-[145px] relative z-20">
@@ -43,7 +43,7 @@ const AwardWinning: React.FC = (): JSX.Element => {
                 className="w-[30%] h-[30%]"
                 objectFit="contain"
                 alt="phone"
-                role="phone"
+                role="image"
                 src={phone}
               />
             </div>
