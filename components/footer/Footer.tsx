@@ -7,11 +7,12 @@ import youtube from "../../assets/socials/youtube.svg";
 import twitter from "../../assets/socials/twitter.svg";
 import pinterest from "../../assets/socials/pinterest.svg";
 import instagram from "../../assets/socials/instagram.svg";
+import { useRouter } from "next/router";
 
 const navList: { name: string; ref: string }[] = [
   { name: "OUR COMPANY", ref: "/" },
-  { name: "LOCATIONS", ref: "/" },
-  { name: "CONTACT", ref: "/" },
+  { name: "LOCATIONS", ref: "/location" },
+  { name: "CONTACT", ref: "/contact" },
 ];
 
 const images: { img: any }[] = [
@@ -33,9 +34,14 @@ const images: { img: any }[] = [
 ];
 
 const Footer = () => {
+  const router = useRouter();
   return (
     <section
-      className={`${styles.container} pt-[253px] md:pt-[173px] lg:pt-[144px] pb-[64px] md:pb-[80px] lg:pb-[72px] `}
+      className={`${styles.container}  ${
+        router.pathname === "/contact"
+          ? "pt-[64px] md:pt-[80px] lg:pt-[70px]"
+          : "pt-[253px] md:pt-[173px] lg:pt-[144px]"
+      }  pb-[64px] md:pb-[80px] lg:pb-[72px] `}
     >
       <div className="relative container  md:px-[40px] xl:px-[165px] pt-[100px] md:pt-0 ">
         <div className="flex flex-col md:flex-row items-center justify-between text-white">
@@ -47,6 +53,7 @@ const Footer = () => {
           <ul className="flex flex-col md:flex-row items-center gap-y-[32px] md:gap-x-[42px]">
             {navList.map((item, index) => (
               <li
+                onClick={() => router.push(item.ref)}
                 className={`${styles.footerList} tracking-[2px] cursor-pointer`}
                 key={index}
               >
