@@ -1,11 +1,33 @@
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
 import Location from "../components/location/Location";
 import styles from "../styles/Contact.module.scss";
 import contactBg from "../assets/backrounds/contactBg.png";
+import { Formik, Form } from "formik";
+import * as Yup from "yup";
+import errorImg from "../assets/mycontact/error.png";
 // import circlemd from "../assets/mycontact/circlemd.png";
 
 const contact: React.FC = (): JSX.Element => {
+  const validationSchema = Yup.object().shape({
+    name: Yup.string()
+      .max(50, "Name too long")
+      // eslint-disable-next-line jsx-a11y/alt-text
+      .required(`Can't be empty`),
+    email: Yup.string().email("Invalid email").required("Can't be empty"),
+    phone: Yup.string().required("Can't be empty"),
+    message: Yup.string()
+      .max(250, "message too long")
+      .required(`Can't be empty`),
+  });
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const formRef = useRef<HTMLFormElement>(null);
+
+  formRef?.current?.addEventListener("submit", (e: any) => {
+    e.preventDefault();
+  });
+
   return (
     <section>
       <div className="relative container  md:px-[40px] xl:px-[165px] pt-[100px] md:pt-0 ">
@@ -29,42 +51,101 @@ const contact: React.FC = (): JSX.Element => {
                 relatable to your users, drop us a line.
               </p>
             </div>
-            <div className="block lg:py-[55px] lg:pr-[95px] lg:w-[100%] mt-[48px] md:mt-[40px] lg:mt-0">
-              <form className="relative z-10" action="">
-                <div className="flex flex-col gap-y-[25px]">
-                  <div className="flex w-full  border-b-2 border-white">
-                    <input
-                      className={`${styles.contactInput} flex-1 bg-transparent`}
-                      type="text"
-                      placeholder="Name"
-                    />
-                  </div>
-                  <div className="w-full flex border-b-2 border-white">
-                    <input
-                      className={`${styles.contactInput} flex-1`}
-                      type="text"
-                      placeholder="Email Address"
-                    />
-                  </div>
-                  <div className="w-full flex border-b-2 border-white">
-                    <input
-                      className={`${styles.contactInput} flex-1`}
-                      type="text"
-                      placeholder="Phone"
-                    />
-                  </div>
-                  <div className="w-full flex  border-b-2 border-white">
-                    <textarea
-                      className={`${styles.contactTextArea} flex-1`}
-                      placeholder="Message"
-                    />
-                  </div>
+
+            <Formik
+              initialValues={{
+                name: "",
+                email: "",
+                phone: "",
+                message: "",
+              }}
+              validationSchema={validationSchema}
+              onSubmit={(values) => {
+                console.log(values);
+              }}
+            >
+              {({ errors, touched, handleSubmit, values, handleChange }) => (
+                <div className="block lg:py-[55px] lg:pr-[95px] lg:w-[100%] mt-[48px] md:mt-[40px] lg:mt-0">
+                  <Form
+                    onSubmit={handleSubmit}
+                    className="relative z-10"
+                    action=""
+                  >
+                    <div className="flex flex-col gap-y-[25px]">
+                      <div className="flex w-full  border-b-2 border-white hover:border-b-4 cursor-pointer">
+                        <input
+                          className={`${styles.contactInput} flex-1 bg-transparent text-[15px] leading-[26px] font-medium`}
+                          type="text"
+                          name="name"
+                          placeholder="Name"
+                          onChange={handleChange}
+                        />
+                        <div className="flex items-center mb-[10px] ">
+                          <p className="text-white italic text-[12px] leading-[26px] font-normal mr-[10px]">
+                            {touched.name && errors.name}
+                          </p>
+                          {errors.name && <Image src={errorImg} alt="error" />}
+                        </div>
+                      </div>
+                      <div className="w-full flex border-b-2 border-white hover:border-b-4 cursor-pointer">
+                        <input
+                          className={`${styles.contactInput} flex-1 text-[15px] leading-[26px] font-medium`}
+                          type="text"
+                          name="email"
+                          placeholder="Email Address"
+                          value={values.email}
+                          onChange={handleChange}
+                        />
+                        <div className="flex items-center mb-[10px] ">
+                          <p className="text-white italic text-[12px] leading-[26px] font-normal mr-[10px]">
+                            {touched.email && errors.email}
+                          </p>
+                          {errors.email && <Image src={errorImg} alt="error" />}
+                        </div>
+                      </div>
+                      <div className="w-full flex border-b-2 border-white hover:border-b-4 cursor-pointer">
+                        <input
+                          className={`${styles.contactInput} flex-1 text-[15px] leading-[26px] font-medium `}
+                          type="text"
+                          name="phone"
+                          placeholder="Phone"
+                          onChange={handleChange}
+                          value={values.phone}
+                        />
+                        <div className="flex items-center mb-[10px] ">
+                          <p className="text-white italic text-[12px] leading-[26px] font-normal mr-[10px]">
+                            {touched.phone && errors.phone}
+                          </p>
+                          {errors.phone && <Image src={errorImg} alt="error" />}
+                        </div>
+                      </div>
+                      <div className="w-full flex  border-b-2 border-white hover:border-b-4 cursor-pointer">
+                        <textarea
+                          className={`${styles.contactTextArea} flex-1 text-[15px] leading-[26px] font-medium`}
+                          placeholder="Message"
+                          name="message"
+                          onChange={handleChange}
+                          value={values.message}
+                        />
+                        <div className="flex items-center mb-[100px] ">
+                          <p className="text-white italic text-[12px] leading-[26px] font-normal mr-[10px]">
+                            {touched.message && errors.message}
+                          </p>
+                          {errors.message && (
+                            <Image src={errorImg} alt="error" />
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="w-full flex justify-center md:justify-end mt-[40px] md:mt-[24px]">
+                      <button type="submit" className={`${styles.contactBtn}`}>
+                        Submit
+                      </button>
+                    </div>
+                  </Form>
                 </div>
-                <div className="w-full flex justify-center md:justify-end mt-[40px] md:mt-[24px]">
-                  <button className={`${styles.contactBtn}`}>Submit</button>
-                </div>
-              </form>
-            </div>
+              )}
+            </Formik>
           </div>
         </div>
         <div className="hidden lg:block absolute top-[800px] z-[-1] right-0">

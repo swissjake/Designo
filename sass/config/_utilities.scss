@@ -24,6 +24,7 @@
     letter-spacing: 1px;
     color: $color;
     background-color: $backgroundColor;
+    outline: none;
 
     &:hover{
         background-color: $light;

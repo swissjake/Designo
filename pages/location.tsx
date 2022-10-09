@@ -46,6 +46,7 @@ const location = () => {
   const [viewState, setViewState] = React.useState<any>({
     width: "100%",
     height: "100%",
+
     longitude: 149.7857846,
     latitude: -30.3295596,
     zoom: 12,
