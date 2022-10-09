@@ -34,7 +34,12 @@ const Project: React.FC = (): JSX.Element => {
           <div className="flex relative group ">
             {/* FOR DESKTOP */}
 
-            <Image alt="web design" objectFit="contain" src={web} />
+            <Image
+              alt="web design"
+              objectFit="contain"
+              src={web}
+              role="design"
+            />
 
             <div className="z-10 absolute text-center left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
               <p
@@ -65,6 +70,7 @@ const Project: React.FC = (): JSX.Element => {
                 alt="web design"
                 objectFit="cover"
                 priority
+                role="design"
                 src={app}
               />
 
@@ -96,6 +102,7 @@ const Project: React.FC = (): JSX.Element => {
                 alt="web design"
                 objectFit="contain"
                 src={graphic}
+                role="design"
               />
               <div className="z-10 absolute text-center left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
                 <p

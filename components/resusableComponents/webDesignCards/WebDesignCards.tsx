@@ -19,6 +19,7 @@ const WebDesignCards = ({ img, title, desc, mobileImg }: Props) => {
             src={img}
             objectFit="contain"
             alt="express"
+            role="design"
           />
         </div>
         <div className="flex hidden md:inline-flex lg:hidden">
@@ -27,6 +28,7 @@ const WebDesignCards = ({ img, title, desc, mobileImg }: Props) => {
             src={mobileImg}
             objectFit="contain"
             alt="express"
+            role="design"
           />
         </div>
 
